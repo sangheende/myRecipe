@@ -10,15 +10,15 @@ import Header from './assets/components/Header'
 function App() {
 
   return (
-    <>
+    <div className="App">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/recipe" element={<Recipe />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
         <Route path="/add" element={<AddRecipe />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

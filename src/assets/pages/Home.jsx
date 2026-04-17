@@ -1,18 +1,15 @@
 import {useEffect} from "react";
-import {Search} from 'feather-icons-react';
+import useRecipes from '../hooks/useRecipes';
 import Card from "../components/Card";
+import SearchInput from "../components/SearchInput";
 import "./css/home.css"
 const Home = () =>{
-    useEffect(()=> {},[])
+    const recipes = useRecipes();
+    console.log(recipes);
     return <div className="home">
-        <div className="search">
-            <Search />
-            <input className='search__input' type="text" placeholder="레시피 이름 또는 재료를 검색하세요"/>
-        </div>
+        <SearchInput />
         <div className="card__list">
-            <Card />
-            <Card />
-            <Card />
+            {recipes.map(recipe => <Card id={recipe.id} title={recipe.title} time={recipe.time} chips={recipe.ingredients}/>)}
 
         </div>
     </div>

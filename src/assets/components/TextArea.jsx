@@ -1,8 +1,7 @@
 import './components.css';
-import {XCircle} from 'feather-icons-react';
 import {useState, useEffect, useRef} from "react";
 
-const Input = ({label, isNecessary = false}) => {
+const TextArea = ({label, isNecessary = false}) => {
     const [value, setValue] = useState("");
 
     const onChangeValue = (e)=> {
@@ -14,12 +13,10 @@ const Input = ({label, isNecessary = false}) => {
                 {label}
             </span>
         </div>
-        <div className="input">
-            <input className="input__input" type="text" placeholder="입력해주세요" value={value} onChange={onChangeValue}/>
-            <button className={`input__button ${value ? 'active' : ''}`} onClick={() => setValue("")}><XCircle /></button>
-        
+        <div className="textarea">
+            <textarea className="textarea__input" placeholder="입력해주세요" value={value} onChange={onChangeValue}></textarea>
         </div>
     </> 
 }
 
-export default Input;
+export default TextArea;

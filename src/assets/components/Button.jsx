@@ -18,7 +18,7 @@ const Button = ({type,text, onClick, className, path, icon}) => {
     }
 
 
-    return <button className={`button button--${type} ${path ? locationButton(path) : {className}}`} onClick={path ? () => handleClick(path) : onClickß}>{icon && <FeatherIcon icon={icon} />} {text}</button>
+    return <button className={`button button--${type} ${path ? locationButton(path) : {className}}`} onClick={path ? () => handleClick(path) : onClick}>{icon && <FeatherIcon icon={icon} />} {text}</button>
 }
 
 export default Button;

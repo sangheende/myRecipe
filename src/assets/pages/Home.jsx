@@ -5,7 +5,7 @@ import SearchInput from "../components/SearchInput";
 import "./css/home.css"
 const Home = () =>{
     const recipes = useRecipes();
-    console.log(recipes);
+    
     return <div className="home">
         <SearchInput />
         <div className="card__list">

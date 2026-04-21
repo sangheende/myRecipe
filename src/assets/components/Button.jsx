@@ -3,22 +3,18 @@ import FeatherIcon from 'feather-icons-react';
 
 import './components.css';
 
-const Button = ({type,text, onClick, className, path, icon}) => {
-    
+const Button = ({type,text, onClick, name, path, icon}) => {
+
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleClick = (path) => {
         navigate(`/${path}`)
     }
 
-    function locationButton(path){
-        const location = useLocation();
-        const isPath =  location.pathname === path;
-        return isPath ?  className : className += ' active';
-    }
+    const isActive = path && location.pathname === path;
 
-
-    return <button className={`button button--${type} ${path ? locationButton(path) : {className}}`} onClick={path ? () => handleClick(path) : onClick}>{icon && <FeatherIcon icon={icon} />} {text}</button>
+    return <button className={`button button--${type} ${name}${isActive ? ' active' : ''}`} onClick={path ? () => handleClick(path) : onClick}>{icon && <FeatherIcon icon={icon} />} {text}</button>
 }
 
 export default Button;

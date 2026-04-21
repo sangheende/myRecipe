@@ -7,7 +7,7 @@ const AddRecipe = () =>{
         <div className="section__header">
             <h1>새 레시피 추가</h1>
         </div>
-        <div className="addRecipe__container">
+        <div className="section__content">
             <div className="addRecipe__list addRecipe__list--basic">
                 <div className="addRecipe__list__item">
                     <Input label="레시피 이름" isNecessary={true}/>
@@ -39,6 +39,8 @@ const AddRecipe = () =>{
                 </div>
             </div>
         </div>
+
+        <Button text="레시피 저장" name="addRecipe__button" type="primary"/>
     </div>
 }
 

@@ -1,0 +1,43 @@
+.recipe__ingredients .recipe__ingre__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px 30px;
+  margin-top: 10px;
+}
+.recipe__ingredients .recipe__ingre__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(50% - 30px);
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-h);
+}
+.recipe__ingredients .recipe__ingre__list .ingre_list_name {
+  font-weight: 600;
+}
+
+.recipe__steps {
+  margin-top: 20px;
+}
+.recipe__steps li {
+  text-align: left;
+  padding: 8px 0;
+  color: var(--text-h);
+}
+.recipe__steps .step__number {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border-radius: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: var(--heading);
+  text-align: center;
+  line-height: 20px;
+  color: var(--bg);
+  background-color: var(--accent);
+}/*# sourceMappingURL=recipe.css.map */

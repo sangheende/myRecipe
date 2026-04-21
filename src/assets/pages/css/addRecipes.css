@@ -6,16 +6,16 @@
   background-color: var(--accent-bg);
 }
 
-.addRecipe__container {
+.section__content {
   padding: 20px 24px;
 }
-.addRecipe__container .addRecipe__list {
+.section__content .addRecipe__list {
   display: flex;
 }
-.addRecipe__container .addRecipe__list + .addRecipe__list {
+.section__content .addRecipe__list + .addRecipe__list {
   margin-top: 20px;
 }
-.addRecipe__container .addRecipe__list .addRecipe__list__title {
+.section__content .addRecipe__list .addRecipe__list__title {
   margin-bottom: 8px;
   font-family: var(--sans);
   font-size: 16px;
@@ -23,25 +23,25 @@
   text-align: left;
   color: #8D8148;
 }
-.addRecipe__container .addRecipe__list--basic {
+.section__content .addRecipe__list--basic {
   gap: 20px;
 }
-.addRecipe__container .addRecipe__list--basic .addRecipe__list__item {
+.section__content .addRecipe__list--basic .addRecipe__list__item {
   flex: 1;
   max-width: 730px;
 }
-.addRecipe__container .addRecipe__list--basic .addRecipe__list__item:last-child .input {
+.section__content .addRecipe__list--basic .addRecipe__list__item:last-child .input {
   display: inline-flex;
   max-width: 60px;
   margin-right: 8px;
 }
-.addRecipe__container .addRecipe__list--basic .addRecipe__list__item:last-child {
+.section__content .addRecipe__list--basic .addRecipe__list__item:last-child {
   max-width: 110px;
 }
-.addRecipe__container .addRecipe__list--ingredient {
+.section__content .addRecipe__list--ingredient {
   flex-direction: column;
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__label {
+.section__content .addRecipe__list--ingredient .addRecipe__list__label {
   display: flex;
   gap: 8px;
   padding-bottom: 6px;
@@ -50,28 +50,33 @@
   font-size: 14px;
   color: var(--text);
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__label span {
+.section__content .addRecipe__list--ingredient .addRecipe__list__label span {
   flex: 1;
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__label span:first-child {
+.section__content .addRecipe__list--ingredient .addRecipe__list__label span:first-child {
   flex: 2;
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__item {
+.section__content .addRecipe__list--ingredient .addRecipe__list__item {
   display: flex;
   gap: 8px;
   padding: 8px 0;
   border-bottom: 1px solid #e6e6e6;
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__item .input:nth-child(2) {
+.section__content .addRecipe__list--ingredient .addRecipe__list__item .input:nth-child(2) {
   flex: 2;
 }
-.addRecipe__container .addRecipe__list--ingredient .addRecipe__list__item .input {
+.section__content .addRecipe__list--ingredient .addRecipe__list__item .input {
   flex: 1;
 }
-.addRecipe__container .addRecipe__list--ingredient .button {
+.section__content .addRecipe__list--ingredient .button {
   margin-top: 12px;
   max-width: 100px;
 }
-.addRecipe__container .addRecipe__list--method .addRecipe__list__item {
+.section__content .addRecipe__list--method .addRecipe__list__item {
   flex: 1;
+}
+
+.addRecipe__button {
+  display: block;
+  width: 100%;
 }/*# sourceMappingURL=addRecipes.css.map */

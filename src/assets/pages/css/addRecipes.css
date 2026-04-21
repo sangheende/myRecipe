@@ -58,6 +58,7 @@
 }
 .section__content .addRecipe__list--ingredient .addRecipe__list__item {
   display: flex;
+  align-items: center;
   gap: 8px;
   padding: 8px 0;
   border-bottom: 1px solid #e6e6e6;
@@ -67,6 +68,19 @@
 }
 .section__content .addRecipe__list--ingredient .addRecipe__list__item .input {
   flex: 1;
+}
+.section__content .addRecipe__list--ingredient .addRecipe__list__item .addRecipe__closeBtn {
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  border-radius: 100%;
+}
+.section__content .addRecipe__list--ingredient .addRecipe__list__item .addRecipe__closeBtn .feather {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  vertical-align: middle;
 }
 .section__content .addRecipe__list--ingredient .button {
   margin-top: 12px;

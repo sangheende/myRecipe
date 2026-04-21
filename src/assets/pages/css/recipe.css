@@ -1,6 +1,6 @@
 .recipe__ingredients .recipe__ingre__list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px 30px;
@@ -18,12 +18,15 @@
 .recipe__ingredients .recipe__ingre__list .ingre_list_name {
   font-weight: 600;
 }
+.recipe__ingredients .recipe__ingre__list .ingre_list_ea {
+  font-size: 16px;
+}
 
 .recipe__steps {
   margin-top: 20px;
+  text-align: left;
 }
 .recipe__steps li {
-  text-align: left;
   padding: 8px 0;
   color: var(--text-h);
 }

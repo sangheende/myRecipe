@@ -1,12 +1,13 @@
 import './components.css';
 import {XCircle} from 'feather-icons-react';
-import {useState, useEffect, useRef} from "react";
+import {useState} from "react";
 
-const Input = ({label, isNecessary = false}) => {
+const Input = ({label, isNecessary = false, onChange}) => {
     const [value, setValue] = useState("");
 
     const onChangeValue = (e)=> {
         setValue(e.target.value);
+        onChange?.(e);
     }
     return<>
         <div className={`input__label ${isNecessary ? 'necessary' : ''}`} style={{display: label ? 'block' : 'none'}}>

@@ -1,9 +1,15 @@
 .header {
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
+  padding: 0 24px;
+  background-color: #fff;
 }
 .header__logo {
+  margin: auto;
   padding-left: 64px;
   font-size: 28px;
   line-height: 36px;
@@ -26,6 +32,7 @@
   border-radius: 8px;
   font-size: 14px;
   font-weight: 700;
+  text-align: center;
   color: var(--text-h);
   background-color: #FFF3C4;
   cursor: pointer;
@@ -43,6 +50,11 @@
   background-color: transparent;
   color: var(--text);
   border: 0;
+}
+.button--danger {
+  border-color: #ff4d4f;
+  color: #fff;
+  background-color: #ffa9aa;
 }
 
 .chip {

@@ -1,3 +1,11 @@
+.section__header {
+  padding: 20px 24px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  background-color: var(--accent-bg);
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -22,6 +30,54 @@
 }
 .header__button.active {
   visibility: visible;
+}
+
+.edit {
+  padding: 16px 24px;
+}
+.edit .section__content {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.edit .section__info .section__content__item:first-child {
+  flex: 2;
+}
+.edit .section__ingredient__label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  font-size: 14px;
+}
+.edit .section__ingredient__label span {
+  flex: 1;
+  text-align: left;
+}
+.edit .section__ingredient__label span:first-child {
+  flex: 1.6;
+}
+.edit .section__ingredient .section__content {
+  flex-direction: column;
+  row-gap: 10px;
+}
+.edit .section__ingredient .section__content__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.edit .section__ingredient .section__content__item .input {
+  flex: 1;
+}
+.edit .section__ingredient .section__content__item .input:first-child {
+  flex: 2;
+}
+.edit .section__ingredient .section__ingredient__add {
+  width: 100%;
+  margin-top: 20px;
 }
 
 .button {
@@ -241,7 +297,7 @@
   border-radius: 10px;
   background-color: #fff;
 }
-.kebab__wrapper .kebab__menu .kebab__item {
+.kebab__wrapper .kebab__menu__item {
   width: 100px;
   padding: 7px 12px;
   border-radius: 6px;
@@ -249,9 +305,9 @@
   font-weight: 500;
   text-align: left;
 }
-.kebab__wrapper .kebab__menu .kebab__item--danger {
+.kebab__wrapper .kebab__menu__item--danger {
   color: #ff4d4f;
 }
-.kebab__wrapper .kebab__menu .kebab__item:hover {
+.kebab__wrapper .kebab__menu__item:hover {
   background-color: var(--bg);
 }/*# sourceMappingURL=components.css.map */

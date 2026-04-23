@@ -14,7 +14,8 @@ const KebabMenu = ({items}) => {
 
         <div className='kebab__menu' ref={ref} style={{display: open ? 'block' : 'none'}}>
             <ul className='kebab__menu__list'>
-                {items.map((item, index) => <li key={index} className={`kebab__item ${item.type === 'danger' ? 'kebab__item--danger' : ''}`}>{item.label}</li>)}
+               <li className='kebab__menu__item'>✏️ 수정</li>
+               <li className='kebab__menu__item kebab__menu__item--danger'>🗑️ 삭제</li>
             </ul>
         </div>
     </div>

@@ -1,17 +1,15 @@
-import {useEffect} from "react";
-import useRecipes from '../hooks/useRecipes';
-import Card from "../components/Card";
-import SearchInput from "../components/SearchInput";
+import {useContext} from 'react';
+import { RecipeContext } from "../../App"
+import Search from "../components/SearchInput";
+import RecipeList from "../components/RecipeList";
 import "./css/home.css"
 const Home = () =>{
-    const recipes = useRecipes();
-    
+    const data = useContext(RecipeContext);
+    console.log(data)
     return <div className="home">
-        <SearchInput />
-        <div className="card__list">
-            {recipes.map(recipe => <Card id={recipe.id} title={recipe.title} time={recipe.time} chips={recipe.ingredients}/>)}
-
-        </div>
+        home
+        <Search />
+        <RecipeList data={data}/>
     </div>
 }
 

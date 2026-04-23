@@ -1,8 +1,8 @@
 import './components.css';
 
-const Chip = ({label, type}) => {
-    return <div className={`chip chip--${type}`}>
-        {label}
+const Chip = ({text, type, onClick}) => {
+    return <div className={`chip chip--${type}`} onClick={onClick}>
+        {text}
     </div>
 }
 

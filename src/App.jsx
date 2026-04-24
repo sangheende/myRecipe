@@ -30,33 +30,33 @@ function App() {
 
   const [data, dispatch] = useReducer(reducer, defaultRecipes);
   const idRef = useRef(3);
-  const onCreate = (pageId, title, ea, steps, time, ingre) =>{
+  const onCreate = ({ category, name, time, ingredients, steps }) =>{
     dispatch(
       {
         type: "CREATE",
         data: {
           pageId : idRef.current++,
-          title,
-          ingre,
-          ea,
-          steps,
+          category,
+          name,
           time,
+          ingredients,
+          steps,
         }
       }
     )
-  } 
+  }
 
-  const onUpdate = (pageId, title, ea, steps, time, ingre) => {
+  const onUpdate = (pageId, category, name, time, ingre, ea, steps) => {
     dispatch(
       {
         type: "UPDATE",
         data: {
           pageId,
-          title,
-          ingre,
-          ea,
-          steps,
+          category,
+          name,
           time,
+          ingredients: [{name: ingre, ea, unit: "g"}],
+          steps,
         }
       }
     )

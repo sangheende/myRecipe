@@ -3,13 +3,14 @@ import {useState} from "react";
 import "./components.css";
 import Button from "./Button";
 
-const IngredientSection = () => {
+const IngredientSection = ({name, onChange = () => {}} ) => {
 
      const [ingredients, setIngredients] = useState([{name: "", ea: "", unit: ""}]);
 
     const addIngredient = () => {
-        setIngredients([...ingredients, {name: "", ea: "", unit: ""}]);
-        console.log(ingredients);
+        const newIngredients = [...ingredients, {name: "", ea: "", unit: ""}];
+        setIngredients(newIngredients);
+        onChange({ target: { name, value: newIngredients } });
     }
 
     const handleChange = (idx, field, value) => {
@@ -17,12 +18,14 @@ const IngredientSection = () => {
             i === idx ? { ...item, [field]: value } : item
         );
         setIngredients(updated);
+        onChange({ target: { name, value: updated } });
     }
 
     const deleteIngredient = (e) => {
         const index = Array.from(e.currentTarget.parentNode.parentNode.children).indexOf(e.currentTarget.parentNode);
-        setIngredients(ingredients.filter((_, idx) => idx !== index));
-        
+        const updated = ingredients.filter((_, idx) => idx !== index);
+        setIngredients(updated);
+        onChange({ target: { name, value: updated } });
     }
 
     return (
@@ -41,7 +44,7 @@ const IngredientSection = () => {
                             <input type="text" className="input__input" placeholder="재료명" value={item.name} onChange={(e) => handleChange(idx, "name", e.target.value)}/>
                         </div>
                         <div className="input">
-                            <input type="number" className="input__input" placeholder="필요량" value={item.ea} onChange={(e) => handleChange(idx, "ea", e.target.value)}/>
+                            <input type="text" className="input__input" placeholder="필요량" value={item.ea} onChange={(e) => handleChange(idx, "ea", e.target.value)}/>
                         </div>
                         <div className="input">
                             <input type="text" className="input__input" placeholder="단위" value={item.unit} onChange={(e) => handleChange(idx, "unit", e.target.value)}/>

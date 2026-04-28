@@ -1,4 +1,4 @@
-import "./components.css"
+import './css/components.css';
 
 const SectionHeader = ({title, chip}) => {
     return <div className="section__header">

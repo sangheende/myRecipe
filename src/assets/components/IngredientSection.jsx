@@ -1,11 +1,15 @@
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
-import "./components.css";
+import './css/components.css';;
 import Button from "./Button";
 
-const IngredientSection = ({name, onChange = () => {}} ) => {
+const IngredientSection = ({name, onChange = () => {}, value }) => {
 
-     const [ingredients, setIngredients] = useState([{name: "", ea: "", unit: ""}]);
+    const [ingredients, setIngredients] = useState([{name: "", ea: "", unit: ""}]);
+    
+    useEffect(()=>{
+        setIngredients(value)
+    },[value])
 
     const addIngredient = () => {
         const newIngredients = [...ingredients, {name: "", ea: "", unit: ""}];
@@ -38,7 +42,7 @@ const IngredientSection = ({name, onChange = () => {}} ) => {
                 <span>단위</span>
             </div>
             <div className="section__content">
-                {ingredients.map((item, idx) => (
+                {ingredients?.map((item, idx) => (
                     <div className="section__content__item" key={idx}>
                         <div className="input">
                             <input type="text" className="input__input" placeholder="재료명" value={item.name} onChange={(e) => handleChange(idx, "name", e.target.value)}/>

@@ -2,11 +2,11 @@ import {Clock} from 'feather-icons-react';
 import {useNavigate} from 'react-router-dom';
 import Chip from "./Chip";
 import KebabMenu from "./KebabMenu";
-import './components.css'; 
+import './css/components.css'; 
 
 const Card = ({title, time, chips, image, id}) =>{
     const navigate = useNavigate();
-    return <div className="card" onClick={() => navigate(`/recipe/${id}`)}>
+    return <div className="card" id={id} onClick={() => navigate(`/recipe/${id}`)}>
             <KebabMenu />
             <div className="card__image"></div>
             <div className="card__content">

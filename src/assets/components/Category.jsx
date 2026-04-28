@@ -17,6 +17,7 @@ const Category = ({onClick = () => {}}) => {
         const isDeselect = selectedId === categoryId
         setSelectedId(isDeselect ? null : categoryId)
         onClick({ target: { name: "category", value: isDeselect ? "" : categories[categoryId - 1] } })
+        console.log(categoryId)
     }
 
     return <div className="category">

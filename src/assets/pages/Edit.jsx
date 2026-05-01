@@ -1,6 +1,8 @@
 import {useParams, useNavigate} from 'react-router-dom';
 import { useState ,useContext, useEffect } from 'react';
 
+import Header from "../components/Header"
+import SectionHeader from "../components/SectionHeader"
 import Editor from '../components/Editor'
 import Button from '../components/Button'
 import { RecipeDispatchContext, RecipeContext } from '../../App';
@@ -36,6 +38,14 @@ const Edit = ()=>{
     };
 
     return <div className="edit">
+         <Header
+            left={{
+                icon:"arrow-left",
+                type:"transparent",
+                path: -1
+            }}
+        />
+        <SectionHeader title="레시피 수정하기"/>
         <Editor input={input} setInput={setInput}/>
         <Button text="추가하기" className="editRecipe__button" type="primary" onClick={onSubmit}/>
     </div>

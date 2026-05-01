@@ -15,11 +15,11 @@ const Editor = ({ input, setInput }) => {
         });
     };
 
-    return <div className="edit">
+    return <div className="editor">
         <section className="section__category">
             <h4 className="input__label">카테고리</h4>
             <div className="section__content">
-                <Category name="category" onClick={onChangeInput}/>
+                <Category name="categoryId" value={input?.categoryId} onClick={onChangeInput}/>
             </div>
         </section>
         <section className="section__info">

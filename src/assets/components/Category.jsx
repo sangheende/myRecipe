@@ -1,23 +1,27 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Chip from "./Chip"
 
 const categories = [
     "🍚 밥요리",
-    "🍲 국물요리",
+    "🍲 국/찌개",
     "🍜 면요리",
-    "🍖 고기요리",
+    "🍖 구이/튀김",
     "🍳 반찬",
-    "🍰 디저트"
+    "🍰 디저트",
+    "🍹 음료"
 ]
 
-const Category = ({onClick = () => {}}) => {
+const Category = ({value, onClick = () => {}}) => {
     const [selectedId, setSelectedId] = useState(null)
+
+    useEffect(() => {
+        if (value) setSelectedId(Number(value))
+    }, [value])
 
     const onClickCategory = (categoryId) => {
         const isDeselect = selectedId === categoryId
         setSelectedId(isDeselect ? null : categoryId)
-        onClick({ target: { name: "category", value: isDeselect ? "" : categories[categoryId - 1] } })
-        console.log(categoryId)
+        onClick({ target: { name: "categoryId", value: categoryId} })
     }
 
     return <div className="category">

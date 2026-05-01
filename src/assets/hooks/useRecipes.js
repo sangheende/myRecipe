@@ -49,17 +49,17 @@ const useRecipes = () => {
     dispatch({ type: "INIT", data: parseData });
   }, []);
 
-  const onCreate = ({ category, title, time, ingredients, steps }) => {
+  const onCreate = ({ categoryId, title, time, ingredients, steps }) => {
     dispatch({
       type: "CREATE",
-      data: { id: idRef.current++, category, title, time, ingredients, steps },
+      data: { id: idRef.current++, categoryId, title, time, ingredients, steps },
     });
   };
 
-  const onUpdate = ({ id, category, title, time, ingredients, steps }) => {
+  const onUpdate = ({ id, categoryId, title, time, ingredients, steps }) => {
     dispatch({
       type: "UPDATE",
-      data: { id, category, title, time, ingredients, steps },
+      data: { id, categoryId, title, time, ingredients, steps },
     });
   };
 

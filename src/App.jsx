@@ -19,13 +19,12 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
       <RecipeContext.Provider value={data}>
         <RecipeDispatchContext.Provider value={{ onCreate, onUpdate, onDelete }}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/recipe/:id" element={<Recipe />} />
-            <Route path="/add" element={<AddRecipe />} />
+            <Route path="/new" element={<AddRecipe />} />
             <Route path="/edit/:id" element={<Edit />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

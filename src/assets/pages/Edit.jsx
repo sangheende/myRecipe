@@ -14,7 +14,7 @@ const Edit = ()=>{
     const data = useContext(RecipeContext);
     const [currentItem, setCurrentItem] = useState();
     const [input, setInput] = useState();
-    const {onUpdate} = useContext(RecipeDispatchContext);
+    const {onUpdate, onDelete} = useContext(RecipeDispatchContext);
     
 
     console.log(data)
@@ -22,7 +22,7 @@ const Edit = ()=>{
         const currentId = data.find((item) => String(item.id) === String(params.id))
 
         if(!currentId){
-            window.alert("존재하지 않는 일기입니다.")
+            window.alert("존재하지 않는 레시피입니다.")
             nav("/", {replace: true})
         }
 
@@ -35,6 +35,15 @@ const Edit = ()=>{
 
     const onSubmit = () => {
         onUpdate(input);
+        window.alert("레시피 수정이 완료되었습니다")
+        nav("/", {replace: true})
+        
+    };
+    const onSubmitDelete = () => {
+        onDelete(input);
+        window.alert("레시피 삭제가 완료되었습니다")
+        nav("/", {replace: true})
+        
     };
 
     return <div className="edit">
@@ -47,7 +56,11 @@ const Edit = ()=>{
         />
         <SectionHeader title="레시피 수정하기"/>
         <Editor input={input} setInput={setInput}/>
-        <Button text="추가하기" className="editRecipe__button" type="primary" onClick={onSubmit}/>
+        <div className='button__section'>
+            <Button text="수정하기" className="large__button" type="primary" onClick={onSubmit}/>
+            <Button text="삭제하기" className="large__button" type="primary" onClick={onSubmitDelete}/>
+
+        </div>
     </div>
 }
 

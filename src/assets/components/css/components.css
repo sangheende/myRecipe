@@ -6,6 +6,10 @@
   background-color: var(--accent-bg);
 }
 
+.section__content {
+  padding: 16px 24px;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -105,6 +109,9 @@
   height: 14px;
   margin-right: 4px;
 }
+.button.large__button {
+  width: 100%;
+}
 .button--primary {
   background-color: var(--accent);
   color: #fff;
@@ -150,9 +157,10 @@
 .card {
   min-width: 100px;
   max-width: 1000px;
+  height: 300px;
   position: relative;
   padding: 24px;
-  border: 1px solid var(--border);
+  border: 1px solid #E9DECA;
   border-radius: 16px;
   background-color: #fff;
   overflow: hidden;
@@ -161,7 +169,7 @@
 .card [class^=card__image--] {
   width: 100%;
   height: 120px;
-  background: no-repeat center left/contain;
+  background: no-repeat center right/contain;
 }
 .card .card__image--1 {
   background-image: url("../../images/category--1.svg");
@@ -211,14 +219,20 @@
 }
 
 .category {
+  overflow: auto;
+}
+.category__wrap {
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .search {
   display: flex;
   align-items: center;
-  margin-bottom: 18px;
+  margin: 18px 0;
   padding: 10px 16px;
   border: 1px solid var(--border);
   border-radius: 20px;
@@ -353,7 +367,7 @@
 .CardStackList {
   overflow: hidden;
   position: relative;
-  height: calc(100vh - 150px);
+  height: calc(100vh - 230px);
 }
 .CardStackList__rail {
   display: flex;
@@ -367,6 +381,8 @@
   flex-shrink: 0;
   width: 100%;
   margin-top: -180px;
+}
+.CardStackList__item .card {
   transition: transform 0.4s cubic-bezier(0.34, 1.15, 0.64, 1), opacity 0.4s ease;
 }
 .CardStackList__item .card::after {
@@ -377,55 +393,57 @@
   display: block;
   width: 100%;
   height: 300px;
-  background-color: #e6e6e6;
+  background-color: #E9DECA;
 }
-.CardStackList__item--slot-0 {
+.CardStackList__item--slot-0 .card {
   transform: scale(0.84);
 }
 .CardStackList__item--slot-0 .card::after {
-  opacity: 0.75;
+  opacity: 0.25;
 }
-.CardStackList__item--slot-1 {
+.CardStackList__item--slot-1 .card {
   transform: scale(0.9);
 }
 .CardStackList__item--slot-1 .card::after {
   opacity: 0.5;
 }
-.CardStackList__item--slot-2 {
+.CardStackList__item--slot-2 .card {
   transform: scale(0.96);
 }
 .CardStackList__item--slot-2 .card::after {
-  opacity: 0.25;
+  opacity: 0.75;
 }
-.CardStackList__item--slot-3 {
+.CardStackList__item--slot-3 .card {
   transform: scale(1);
   z-index: 100;
+  border-color: #EBCC00;
+  background-color: #EBCC00;
 }
 .CardStackList__item--slot-3 .card::after {
   opacity: 0;
 }
-.CardStackList__item--slot-4 {
+.CardStackList__item--slot-4 .card {
   transform: scale(0.96);
   z-index: 90;
 }
 .CardStackList__item--slot-4 .card::after {
-  opacity: 0.25;
+  opacity: 0.75;
 }
-.CardStackList__item--slot-5 {
+.CardStackList__item--slot-5 .card {
   transform: scale(0.9);
   z-index: 80;
 }
 .CardStackList__item--slot-5 .card::after {
   opacity: 0.5;
 }
-.CardStackList__item--slot-6 {
-  transform: scale(0.84);
-}
-.CardStackList__item--slot-6 .card::after {
-  opacity: 0.75;
-}
-.CardStackList__item--hidden {
-  transform: scale(0.8);
+.CardStackList__item--hidden .card {
   opacity: 0;
   pointer-events: none;
+}
+
+.RecipeList {
+  padding: 16px 24px;
+}
+.RecipeList .category {
+  margin-bottom: 30px;
 }/*# sourceMappingURL=components.css.map */

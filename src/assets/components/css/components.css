@@ -10,6 +10,17 @@
   padding: 16px 24px;
 }
 
+.button__section {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #fff;
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -44,12 +55,13 @@
 }
 
 .editor {
-  padding: 16px 24px;
+  padding: 16px 24px 100px;
 }
 .editor .section__content {
   display: flex;
   gap: 10px;
   align-items: center;
+  padding: 8px 0;
 }
 .editor .section__info .section__content__item:first-child {
   flex: 2;
@@ -124,7 +136,7 @@
 .button--danger {
   border-color: #ff4d4f;
   color: #fff;
-  background-color: #ffa9aa;
+  background-color: #ff4d4f;
 }
 
 .chip {

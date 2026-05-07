@@ -75,7 +75,7 @@ const CardStackList = ({ recipes }) => {
               className={`CardStackList__item ${visible ? `CardStackList__item--slot-${slot}` : 'CardStackList__item--hidden'}`}
               onClick={() => setOffset(i)}
             >
-              <Card {...recipe} isActive={slot === ACTIVE_SLOT + 1} />
+              <Card {...recipe} isActive={slot === ACTIVE_SLOT} />
             </div>
           )
         })}

@@ -57,8 +57,8 @@ const Edit = ()=>{
         <SectionHeader title="레시피 수정하기"/>
         <Editor input={input} setInput={setInput}/>
         <div className='button__section'>
-            <Button text="수정하기" className="large__button" type="primary" onClick={onSubmit}/>
-            <Button text="삭제하기" className="large__button" type="primary" onClick={onSubmitDelete}/>
+            <Button text="삭제하기" className="large__button" type="danger" onClick={onSubmitDelete}/>
+            <Button text="수정하기" className="large__button" type="secondary" onClick={onSubmit}/>
 
         </div>
     </div>

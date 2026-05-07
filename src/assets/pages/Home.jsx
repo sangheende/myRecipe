@@ -12,7 +12,7 @@ const Home = () =>{
     return <div className="home">
         <Header right = {{
             text: "레시피 추가하기",
-            type: "primary",
+            type: "secondary",
             className: "btn-add",
             icon: "plus",
             path: "/new"

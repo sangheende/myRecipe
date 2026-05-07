@@ -41,6 +41,11 @@
   background: url(../../images/logo.svg) no-repeat left center/contain;
   cursor: pointer;
 }
+@media (max-width: 461px) {
+  .header__logo {
+    font-size: 0;
+  }
+}
 .header .header__btn--left {
   position: absolute;
   top: 50%;

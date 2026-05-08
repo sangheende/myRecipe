@@ -5,9 +5,14 @@
 ---
 
 ## 📸 미리보기
+<table>
+  <tr>
+    <td align="center"><img width="393" height="852" alt="list" src="https://github.com/user-attachments/assets/03610676-6c2b-4bef-b82e-dc07439cf631" /><br>레시피 목록</td>
+    <td align="center"><img width="393" height="852" alt="detail" src="https://github.com/user-attachments/assets/217d9cfc-c629-4fd9-8e94-8a975404e0dd" /><br>레시피 상세</td>
+    <td align="center"><img width="393" height="852" alt="new" src="https://github.com/user-attachments/assets/3a5b1785-c63f-4f51-85ef-c5df1cc97d15" /><br>새 레시피 추가</td>
+  </tr>
+</table>
 
-<img width="393" height="852" alt="iPhone 16 - 1" src="https://github.com/user-attachments/assets/1ec96941-6898-40f1-ba8d-a0d82f21aef5" /><img width="393" height="852" alt="iPhone 16 - 3" src="https://github.com/user-attachments/assets/e094f917-c36a-41ad-bf87-32d2d156477f" />
-<img width="393" height="852" alt="iPhone 16 - 2" src="https://github.com/user-attachments/assets/5202d48e-43eb-44e4-951e-dec69a404195" />
 
 
 ---
@@ -17,7 +22,7 @@
 - 레시피 등록 (재료, 조리 순서, 소요 시간)
 - 카테고리별 분류 — 밥 🍚 / 면 🍜 / 국·찌개 🍲 / 반찬 🥢 / 구이·튀김 🍳 / 빵·간식 🍞 / 음료 🥤
 - 레시피 이름 및 재료로 검색
-- 관리자 모드에서 레시피 추가·수정·삭제 (`?admin=true`)
+- 레시피 추가·수정·삭제 (`?admin=true`)
 
 ---
 

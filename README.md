@@ -1,16 +1,37 @@
-# React + Vite
+# 오늘 뭐 먹지?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> 내가 자주 만드는 요리 레시피를 직접 기록하고 관리하는 개인 레시피 노트
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📸 미리보기
+<table>
+  <tr>
+    <td align="center"><img width="393" height="852" alt="list" src="https://github.com/user-attachments/assets/03610676-6c2b-4bef-b82e-dc07439cf631" /><br>레시피 목록</td>
+    <td align="center"><img width="393" height="852" alt="detail" src="https://github.com/user-attachments/assets/217d9cfc-c629-4fd9-8e94-8a975404e0dd" /><br>레시피 상세</td>
+    <td align="center"><img width="393" height="852" alt="new" src="https://github.com/user-attachments/assets/3a5b1785-c63f-4f51-85ef-c5df1cc97d15" /><br>새 레시피 추가</td>
+  </tr>
+</table>
 
-## React Compiler
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ 주요 기능
+
+- 레시피 등록 (재료, 조리 순서, 소요 시간)
+- 카테고리별 분류 — 밥 🍚 / 면 🍜 / 국·찌개 🍲 / 반찬 🥢 / 구이·튀김 🍳 / 빵·간식 🍞 / 음료 🥤
+- 레시피 이름 및 재료로 검색
+- 레시피 추가·수정·삭제 (`?admin=true`)
+
+---
+
+## 🛠 기술 스택
+
+| 분류 | 사용 기술 |
+|------|-----------|
+| 프레임워크 | React + Vite |
+| 라우팅 | react-router-dom |
+| 스타일 | CSS Modules |
+
+---

@@ -45,12 +45,31 @@ const CardStackList = ({ recipes }) => {
   useEffect(() => {
     const el = containerRef.current
     if (!el) return
+
     const handleWheel = (e) => {
       e.preventDefault()
       move(e.deltaY > 0 ? 1 : -1)
     }
+
+    let touchStartY = null
+    const handleTouchStart = (e) => { touchStartY = e.touches[0].clientY }
+    const handleTouchMove = (e) => {
+      if (touchStartY === null) return
+      const delta = touchStartY - e.touches[0].clientY
+      if (Math.abs(delta) > 30) {
+        move(delta > 0 ? 1 : -1)
+        touchStartY = e.touches[0].clientY
+      }
+    }
+
     el.addEventListener('wheel', handleWheel, { passive: false })
-    return () => el.removeEventListener('wheel', handleWheel)
+    el.addEventListener('touchstart', handleTouchStart, { passive: true })
+    el.addEventListener('touchmove', handleTouchMove, { passive: true })
+    return () => {
+      el.removeEventListener('wheel', handleWheel)
+      el.removeEventListener('touchstart', handleTouchStart)
+      el.removeEventListener('touchmove', handleTouchMove)
+    }
   }, [move])
 
   const railTop = CARD_HEIGHT + (START_SLOT - ACTIVE_SLOT) * VISUAL_STEP - offset * VISUAL_STEP
